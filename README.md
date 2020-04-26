@@ -1,11 +1,15 @@
 # System Engineering Devops
+Repository with projects and tasks related with DevOps
+## Projects
 
-## Tasks
+* [Shell basics]()
+* [Shell permissions]()
+* [Shell redirections]()
+* [Shell variable expansions]()
+* [Loops conditions and parsing]()
+* [Process and signals]()
+* [Regular expressions]()
 
-* Shell basics
-* Shell permissions
-* Shell redirections
-* Shell variable expansions
-* Loops conditions and parsing
-* Process and signals
-* Regular expressions
+## Author
+
+Gabriel Montaño - [@exploitpnk](https://twitter.com/exploitpnk)
