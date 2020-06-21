@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Read /etc/passwd and display only username, user id and home for the user
+file="/etc/passwd"
+while IFS= read -r username userid homedir
+do
+    echo "$username, $userid, $homedir"
+done < "$file"
