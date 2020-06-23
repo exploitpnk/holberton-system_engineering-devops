@@ -21,7 +21,7 @@ catchsigquit()
 }
 remove()
 {
-    rm /tmp/holbertonscript.pid
+    rm -f /tmp/holbertonscript.pid
     exit 0
 }
 while true
