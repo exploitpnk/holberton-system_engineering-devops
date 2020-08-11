@@ -17,6 +17,6 @@ exec { "sed -i '/server_name _;/a rewrite ^/redirect_me/(.*)$ https://ddg.gg per
     command => "/bin/sed -i '/server_name _;/a rewrite ^/redirect_me/(.*)$ https://ddg.gg permanent;' /etc/nginx/sites-available/default"
 }
 
-exec { 'service nginx restart':
-    command => 'service nginx restart'
+exec { '/etc/init.d/nginx restart':
+    command => '/etc/init.d/nginx restart'
 }
