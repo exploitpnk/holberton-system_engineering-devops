@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-sed -i '/sendfile on;/a add_header X-Served-By 1245-web-02;' /etc/nginx/nginx.conf
-service nginx restart
-
+# Nginx configuration | custom 404 page
+sudo apt-get update && sudo apt-get install nginx -y
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i "/server_name _;/a rewrite ^/redirect_me/(.*)$ https://ddg.gg permanent;" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee -a /usr/share/nginx/html/404.html
+sed -i "/server_name _;/a \ \terror_page 404 /404.html;location = /404.html { root /usr/share/nginx/html; internal; }" /etc/nginx/sites-available/default
+sed -i '/sendfile on;/a add_header X-Served-By $hostname;' /etc/nginx/nginx.conf
+sudo service nginx restart
