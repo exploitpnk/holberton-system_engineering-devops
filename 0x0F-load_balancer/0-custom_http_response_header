@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+sed -i '/sendfile on;/a add_header X-Served-By 1245-web-02;' /etc/nginx/nginx.conf
+service nginx restart
+
