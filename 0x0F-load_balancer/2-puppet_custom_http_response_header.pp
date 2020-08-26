@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # Creating a custom HTTP header response with Puppet
 exec { 'update_system':
 	command => 'sudo apt-get update -y',
