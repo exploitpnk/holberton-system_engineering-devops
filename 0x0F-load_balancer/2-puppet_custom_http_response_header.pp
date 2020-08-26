@@ -1,6 +1,6 @@
 # Creating a custom HTTP header response with Puppet
 exec { 'update_system':
-  command => 'sudo sudo apt-get update -y',
+  command => 'sudo apt-get update -y',
   path    => ['/usr/bin', '/bin'],
 }
 
