@@ -14,5 +14,5 @@ exec {'add_headers':
 }
 exec { 'restart_nginx':
   command => 'sudo service nginx start',
-  path    => ['/usr/bin', '/bin'],
+  path    => ['/usr/bin', '/usr/sbin', '/bin'],
 }
