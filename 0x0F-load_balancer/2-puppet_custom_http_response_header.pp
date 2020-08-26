@@ -17,5 +17,5 @@ file_line { 'apply_config':
 }
 service { 'nginx':
   ensure  => running,
-  require => Package['nginx'],
+  require => Package['install_nginx'],
 }
