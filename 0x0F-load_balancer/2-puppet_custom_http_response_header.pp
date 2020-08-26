@@ -13,7 +13,7 @@ file_line { 'apply_config':
   path    => '/etc/nginx/sites-available/default',
   after   => 'server_name _;',
   line    => 'add_header X-Served-By "$HOSTNAME";',
-  require => Package['nginx'],
+  require => Package['install_nginx'],
 }
 service { 'nginx':
   ensure  => running,
