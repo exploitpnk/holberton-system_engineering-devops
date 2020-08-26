@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Install HAProxy (Load Balancer)
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install haproxy -y
 wget https://raw.githubusercontent.com/exploitpnk/holberton-system_engineering-devops/master/0x0F-load_balancer/config_update.txt -O /tmp/config_update.txt
