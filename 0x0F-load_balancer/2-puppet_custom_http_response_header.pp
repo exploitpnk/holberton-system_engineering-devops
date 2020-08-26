@@ -9,7 +9,7 @@ exec { 'install_nginx':
 	path    => [ '/usr/bin', '/bin' ],
 }
 exec {'add_headers':
-	command => 'sudo sed -i '/sendfile on;/a add_header X-Served-By $hostname;' /etc/nginx/nginx.conf'
+	command => 'sudo sed -i "s/server_name _;/server_name _;\n\tadd_header X-Served-By \$hostname;/" /etc/nginx/sites-enabled/default'
 	path	=> ['/usr/bin', '/bin' ],
 }
 exec { 'restart_nginx':
