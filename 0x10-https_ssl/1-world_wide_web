@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# DNS and subdomain checker
+if [ "$3" != "" ]; then
+    echo "The subdomain www is a A record and points to $(dig www.$1 |  sed '/\n/!s/[0-9.]\+/\n&\n/;/^\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}\n/P;D' | awk 'NR==1{print $1}')"
+	echo "The subdomain lb-01 is a A record and points to $(dig lb-01.$1 |  sed '/\n/!s/[0-9.]\+/\n&\n/;/^\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}\n/P;D' | awk 'NR==1{print $1}')"
+	echo "The subdomain web-01 is a A record and points to $(dig web-01.$1 |  sed '/\n/!s/[0-9.]\+/\n&\n/;/^\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}\n/P;D' | awk 'NR==1{print $1}')"
+	echo "The subdomain web-02 is a A record and points to $(dig web-02.$1 |  sed '/\n/!s/[0-9.]\+/\n&\n/;/^\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}\n/P;D' | awk 'NR==1{print $1}')"
+elif [ "$2" == "www" ]; then
+	echo "The subdomain www is a A record and points to $(dig www.$1 |  sed '/\n/!s/[0-9.]\+/\n&\n/;/^\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}\n/P;D' | awk 'NR==1{print $1}')"
+
+else
+    echo "Positional parameter 1 is empty"
+fi
