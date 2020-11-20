@@ -32,3 +32,7 @@ I implemented a solution with CloudFlare to handle this bad traffic and still on
 ## Correct and Preventative Measures
 
 As I mentioned, the measures taken was use CloudFlare, a solution to prevent DDoS attacks, after implement this, the attacks continue a few days but without any impact.
+
+## Misc
+
+I used logstalgia software to visualize the first attack [video](https://www.youtube.com/watch?v=FLmF35Xs4bg)
